@@ -24,15 +24,15 @@
                 </a>
                 <ul class="mt-6">
                     <li class="relative px-6 py-3">
-                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                            href="../index.html">
+                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ request()->routeIs('dashboard') ? 'text-black hover:text-black dark:hover:text-black' : '' }}"
+                            href="{{ route('dashboard') }}">
                             <i class="fa-solid fa-desktop"></i>
                             <span class="ml-4">Dashboard</span>
                         </a>
                     </li>
                     <li class="relative px-6 py-3">
-                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
-                            href="../index.html">
+                        <a class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 {{ request()->routeIs('supir.*') ? 'text-black hover:text-black dark:hover:text-black' : '' }}"
+                            href="{{ route('supir.index') }}">
                             <i class="fa-solid fa-id-card"></i>
                             <span class="ml-4">Supir</span>
                         </a>
