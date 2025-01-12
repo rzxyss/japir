@@ -59,10 +59,7 @@ class SupirController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
-    {
-        
-    }
+    public function show(string $id) {}
 
     /**
      * Show the form for editing the specified resource.
@@ -103,12 +100,12 @@ class SupirController extends Controller
                 'telp' => $request->input('telp'),
             ]);
         }
-        
+
 
         if ($supir) {
-            return redirect()->route('supir.index')->with('message', 'Supir Berhasil Ditambahkan!');
+            return redirect()->route('supir.index')->with('message', 'Supir Berhasil Diupdate!');
         } else {
-            return redirect()->route('supir.create')->with('error', 'Terjadi Kesalahan Saat Menambahkan Supir!');
+            return redirect()->route('supir.update', $supir->id)->with('error', 'Terjadi Kesalahan Saat Mengupdate Supir!');
         }
     }
 
