@@ -7,6 +7,7 @@ use App\Models\Mobil;
 use App\Models\User;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class JadwalController extends Controller
 {
@@ -15,7 +16,11 @@ class JadwalController extends Controller
     public function index()
     {
         $title = 'Data Jadwal';
-        $jadwal = Jadwal::with('supir', 'mobil')->get();
+        if (Auth::user()->role == 'admin') {
+            $jadwal = Jadwal::with('supir', 'mobil')->get();
+        } else {
+            $jadwal = Jadwal::with('supir', 'mobil')->where('id_supir', '=', Auth::user()->id)->get();
+        }
 
         return view('jadwal.index', compact('title', 'jadwal'));
     }
