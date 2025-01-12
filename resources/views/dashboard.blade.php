@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-    hai {{ Auth::User()->name }} tes
+    hai {{ Auth::User()->name }}
 @endsection
