@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Windmill Dashboard</title>
+    <title>Login - Sistem Penjadwalan Supir</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="{{ asset('assets/css/tailwind.output.css') }}" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -17,9 +17,9 @@
             <div class="flex flex-col overflow-y-auto md:flex-row">
                 <div class="h-32 md:h-auto md:w-1/2">
                     <img aria-hidden="true" class="object-cover w-full h-full dark:hidden"
-                        src="../assets/img/login-office.jpeg" alt="Office" />
+                        src="{{ asset('assets/img/bg.jpg') }}" alt="JAPIR" />
                     <img aria-hidden="true" class="hidden object-cover w-full h-full dark:block"
-                        src="../assets/img/login-office-dark.jpeg" alt="Office" />
+                        src="{{ asset('assets/img/bg.jpg') }}" alt="JAPIR" />
                 </div>
                 <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
                     <div class="w-full">
