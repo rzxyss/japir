@@ -124,6 +124,7 @@ class JadwalController extends Controller
      */
     public function destroy(Jadwal $jadwal)
     {
+        $jadwal->delete();
         if ($jadwal) {
             return redirect()->route('jadwal.index')->with('message', 'Jadwal Berhasil Dihapus!');
         } else {
